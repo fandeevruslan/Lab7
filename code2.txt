@@ -1,0 +1,231 @@
+try
+
+{
+
+//блок коду, що перевіряється на помилки
+
+}
+
+catch
+
+{
+
+//Обробка всіх виняткових ситуацій
+
+//Виконується тільки якщо
+
+//виникла виняткова ситуація
+
+}
+
+finally
+
+{
+
+//Очищення ресурсів
+
+//Виконується в будь-якому випадку
+
+}
+
+
+
+static void Main(string [] arg)
+
+{
+
+try
+
+{
+
+int a = int.Parse(arg[0]);
+
+int b = int.Parse(arg[1]);
+
+Console.WriteLine($"result: {a}+{b} = {a + b}");
+
+}
+
+catch
+
+{
+
+Console.WriteLine("Somethings wrong :(");
+
+}
+
+}
+
+
+
+
+
+try{
+
+int a = int.Parse(arg[0]);
+
+int b = int.Parse(arg[1]);
+
+Console.WriteLine($"result: {a}+{b} = {a + b}");
+
+}
+
+catch (FormatException){
+
+Console.WriteLine("Enter just a number next time!");
+
+}
+
+catch (IndexOutOfRangeException){
+
+Console.WriteLine("You need 2 arguments");
+
+}
+
+catch (OverflowException){
+
+Console.WriteLine("number range in {0:E} - {1:E}", int.MinValue,
+
+
+static void Main(string [] arg)
+
+{
+
+try{
+
+int a = int.Parse(arg[0]);
+
+int b = int.Parse(arg[1]);
+
+checked{
+
+Console.WriteLine($"result: {a}+{b} = {a + b}");
+
+}
+
+}
+
+catch (FormatException){
+
+Console.WriteLine("Enter just a number next time!");
+
+}
+
+catch (IndexOutOfRangeException){
+
+Console.WriteLine("You need 2 arguments");
+
+
+
+try
+
+{
+
+//блок коду, що перевіряється на помилки
+
+}
+
+|(&) catch [(КласВинятку1 [ідентифікатор])] [when (умова)]
+
+{
+
+//Обробка винятку класу КласВинятку1
+
+}
+
+[catch [(КласВинятку2 [ідентифікатор])] [when (умова)]
+
+{
+
+//Обробка винятку класу КласВинятку2
+
+}]
+
+[ catch [when (умова)]
+
+{
+
+//Обробка всіх випадків
+
+//крім КласВинятку1 та КласВинятку2
+
+}]
+
+|(&) finally
+
+{
+
+//Очищення ресурсів
+
+}
+
+
+FileStream stream=null;
+
+try{
+
+stream = new FileStream("d://1.txt", FileMode.Open);
+
+int b;
+
+while ((b=stream.ReadByte())!=-1)
+
+{
+
+Console.Write((char)b);
+
+}
+
+}
+
+finally{
+
+if(stream!=null)
+
+stream.Close();
+
+}
+
+
+
+class Program {
+
+private static void Main(string[] args)
+
+{
+
+Console.WriteLine("Enter number for x value:");
+
+int x = int.Parse(Console.ReadLine());
+
+Console.WriteLine("Enter number for y value:");
+
+int y = int.Parse(Console.ReadLine());
+
+try{
+
+Console.WriteLine(MyDiv(x, y));
+
+}
+
+catch (Exception e){
+
+Console.WriteLine(e.Message);
+
+}
+
+Console.ReadKey();
+
+}
+
+private static double MyDiv(int a, int b)
+
+{
+
+if(b==0)
+
+throw new Exception("Division by zero");
+
+return (double)a/b;
+
+}
